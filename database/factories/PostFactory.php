@@ -20,7 +20,7 @@ class PostFactory extends Factory
             'title' => fake()->sentence(mt_rand(2,4)),
             'content' => fake()->paragraph(mt_rand(3,5)),
             'image' => fake()->word().'.jpg',
-            'user_id' => 1,
+            'user_id' => mt_rand(1,2),
             'category_id' => mt_rand(1,2)
         ];
     }

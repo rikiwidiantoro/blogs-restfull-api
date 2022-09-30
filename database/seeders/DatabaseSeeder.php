@@ -25,6 +25,8 @@ class DatabaseSeeder extends Seeder
         // ]);
 
 
+        User::factory(2)->create();
+
         Category::create([
             'name' => 'kategori satu',
             'user_id' => '1'
