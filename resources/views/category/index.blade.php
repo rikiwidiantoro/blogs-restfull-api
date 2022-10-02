@@ -16,14 +16,14 @@
           <tr>
             <th>Id</th>
             <th>Category Name</th>
-            <th>User Id</th>
+            <th>Author</th>
             <th colspan="2">Aksi</th>
           </tr>
           @foreach($categories as $category)
           <tr>
             <td>{{ $category->id }}</td>
             <td>{{ $category->name }}</td>
-            <td>{{ $category->user_id }}</td>
+            <td>{{ $category->user->name }}</td>
             <td>
               <a href="/category/<?=$category->id?>/edit">
                 <button type="button" class="btn btn-warning btn-sm">Edit</button>

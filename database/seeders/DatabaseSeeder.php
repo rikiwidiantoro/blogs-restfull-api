@@ -25,22 +25,22 @@ class DatabaseSeeder extends Seeder
         // ]);
 
 
-        User::factory(2)->create();
+        User::factory(3)->create();
 
         Category::create([
             'name' => 'kategori satu',
-            'user_id' => '1'
+            'user_id' => '3'
         ]);
         Category::create([
             'name' => 'kategori dua',
-            'user_id' => '1'
+            'user_id' => '2'
         ]);
         Category::create([
             'name' => 'kategori tiga',
-            'user_id' => '2'
+            'user_id' => '1'
         ]);
 
-        Post::factory(5)->create();
+        Post::factory(10)->create();
 
         // Post::create([
         //     'title' => 'judul satu',

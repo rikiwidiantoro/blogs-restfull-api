@@ -27,7 +27,7 @@
             {{-- @foreach($posts as $post) --}}
             <article class="border-bottom my-3">
                 <h4>{{ $detail->title }}</h4>
-                <p>Author by <span>{{ $detail->user->name }}</span> | <span>category : <a href="#"><em>{{ $detail->category->name }}</em></a></span></p>
+                <p>Author by <span>{{ $detail->user->name }}</span> | <span>category : <em>{{ $detail->category->name }}</em></span></p>
                 <p>{{ $detail->image }}</p>
                 <p>{{ $detail->content }}</p>
                 {{-- <a href="#" class="btn btn-secondary btn-sm mb-3">show detail</a> --}}

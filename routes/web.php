@@ -32,12 +32,12 @@ Route::get('/home', function() {
 //     ]);
 // });
 Route::get('/posts', [App\Http\Controllers\PostController::class, 'index']);
-Route::get('/posts/{post:id}', [PostController::class, 'detail']);
 Route::get('/posts/create', [App\Http\Controllers\PostController::class, 'create']);
 Route::post('/posts/store', [PostController::class, 'store']);
 Route::get('/posts/{id}/edit', [PostController::class, 'edit']);
 Route::put('/posts/{id}', [PostController::class, 'update']);
 Route::delete('/posts/{id}', [PostController::class, 'destroy']);
+Route::get('/posts/{post:id}', [PostController::class, 'detail']);
 
 
 Route::get('/category', [App\Http\Controllers\CategoryController::class, 'index']);
