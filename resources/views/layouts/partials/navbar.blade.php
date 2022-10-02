@@ -7,7 +7,8 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link mx-4 {{ ($title === 'Home') ? 'active' : '' }}" href="/home">Home</a>
-        <a class="nav-link {{ ($title === 'Posts') ? 'active' : '' }}" href="/posts">Posts</a>
+        <a class="nav-link {{ ($title === 'Posts' || $title === 'Posts | Edit' || $title === 'Posts | Tambah' || $title === 'Post | Detail') ? 'active' : '' }}" href="/posts">Posts</a>
+        <a class="nav-link mx-4 {{ ($title === 'Category' || $title === 'Category | Edit' || $title === 'Category | Tambah') ? 'active' : '' }}" href="/category">Category</a>
       </div>
     </div>
   </div>

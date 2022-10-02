@@ -41,4 +41,12 @@ class PostController extends Controller
         $datas->delete();
         return redirect('/posts');
     }
+    
+
+    public function detail(Post $post) {
+        return view('post.post', [
+            'title' => 'Post | Detail',
+            'detail' => $post
+        ]);
+    }
 }
