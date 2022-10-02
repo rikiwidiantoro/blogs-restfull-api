@@ -35,6 +35,10 @@ class DatabaseSeeder extends Seeder
             'name' => 'kategori dua',
             'user_id' => '1'
         ]);
+        Category::create([
+            'name' => 'kategori tiga',
+            'user_id' => '2'
+        ]);
 
         Post::factory(5)->create();
 

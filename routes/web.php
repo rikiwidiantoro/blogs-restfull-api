@@ -2,6 +2,7 @@
 
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,12 +20,19 @@ Route::get('/', function () {
 });
 Route::get('/home', function() {
     return view('home', [
-        'title' => 'Home'
-    ]);
-});
-Route::get('/posts', function() {
-    return view('posts', [
-        'title' => 'Posts',
+        'title' => 'Home',
         'posts' => Post::all()
     ]);
 });
+// Route::get('/posts', function() {
+//     return view('posts', [
+//         'title' => 'Posts',
+//         'posts' => Post::all()
+//     ]);
+// });
+Route::get('/posts', [App\Http\Controllers\PostController::class, 'index']);
+Route::get('/posts/create', [App\Http\Controllers\PostController::class, 'create']);
+Route::post('/posts/store', [PostController::class, 'store']);
+Route::get('/posts/{id}/edit', [PostController::class, 'edit']);
+Route::put('/posts/{id}', [PostController::class, 'update']);
+Route::delete('/posts/{id}', [PostController::class, 'destroy']);
